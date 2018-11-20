@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_score"
+        android:icon="@drawable/my_score"
+        android:title="@string/menu_my_score" />
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@drawable/settings"
+        android:title="@string/menu_settings" />
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/home"
+        android:title="@string/menu_home" />
+    <item
+        android:id="@+id/menu_topics"
+        android:icon="@drawable/browse_topics"
+        android:title="@string/menu_topics" />
+    <item
+        android:id="@+id/menu_notifications"
+        android:icon="@drawable/notification"
+        android:title="@string/quick_challenge" />
+</menu>

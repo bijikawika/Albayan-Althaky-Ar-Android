@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardUseCompatPadding="true">
+<FrameLayout
+    android:id="@+id/mainFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/top_players_background"
+    android:padding="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:background="@color/top_players_background">
+
+            <TextView
+                android:id="@+id/playerNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:layout_marginStart="60dp"
+                android:textSize="10sp"
+                android:text="@string/nair_mohamed_ali_almazimi" />
+            <TextView
+                android:id="@+id/rankBadgeTextView"
+                android:layout_width="60dp"
+                android:layout_height="16dp"
+                android:textSize="9sp"
+                android:layout_below="@+id/playerNameTextView"
+                android:layout_marginStart="35dp"
+                android:text="Rank 1"
+                android:textColor="@color/white"
+                android:layout_marginBottom="2dp"
+                android:paddingStart="18dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/rank_badge" />
+
+            <TextView
+                android:id="@+id/departmentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_below="@+id/playerNameTextView"
+                android:layout_toEndOf="@+id/rankBadgeTextView"
+                android:text="@string/dubai_hr_law"
+                android:layout_marginEnd="2dp"
+                android:textSize="11sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/topPlayersImageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/avatar"
+                    android:src="@drawable/avatar"
+                    android:transitionName="@string/simple_fragment_transition"
+                    tools:ignore="UnusedAttribute" />
+
+                <ProgressBar
+                    android:id="@+id/imageProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/choosePictureRelativeLayout"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="end|bottom"
+                    android:background="@drawable/white_circle">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/gold_circle"
+                        android:tint="@android:color/white"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+            </FrameLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+</android.support.v7.widget.CardView>

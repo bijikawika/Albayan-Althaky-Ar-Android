@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gold_light">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/header_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/navigation"
+            android:layout_below="@+id/toolbar_layout"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/vRevealEffect"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="5dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:id="@+id/profileDetailsLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:background="@drawable/main_background"
+                            android:nestedScrollingEnabled="true"
+                            android:orientation="horizontal"
+                            android:paddingEnd="5dp"
+                            android:paddingStart="5dp">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="50dp"
+                                    android:gravity="center|start"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/userNameTextView"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="4dp"
+                                        android:drawablePadding="4dp"
+                                        android:drawableStart="@drawable/ic_green_dot"
+                                        android:maxLines="1"
+                                        android:paddingEnd="5dp"
+                                        android:paddingStart="28dp"
+                                        android:gravity="start"
+                                        android:singleLine="true"
+                                        android:text="@string/nair_mohamed_ali_almazimi"
+                                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                        android:textColor="@android:color/white" />
+
+                                    <LinearLayout
+                                        android:id="@+id/departmentLinearLayout"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/department_background"
+                                        android:gravity="center">
+
+                                        <TextView
+                                            android:id="@+id/departmentTextView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="30dp"
+                                            android:paddingEnd="10dp"
+                                            android:singleLine="true"
+                                            android:text="@string/department"
+                                            android:textColor="@android:color/white" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="match_parent">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:id="@+id/profileImageView"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_centerInParent="true"
+                                        android:layout_gravity="start"
+                                        android:contentDescription="@string/action_refresh"
+                                        android:src="@drawable/avatar"
+                                        app:civ_border_color="@android:color/white"
+                                        app:civ_border_width="2dp" />
+                                </RelativeLayout>
+                            </FrameLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:paddingEnd="5dp"
+                                android:paddingStart="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@android:color/white" />
+
+                                <TextView
+                                    android:id="@+id/scoreTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:text="0"
+                                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="37dp"
+                                    android:textStyle="italic" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:text="@string/my_score"
+                                    android:textColor="@android:color/white" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@android:color/white" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="5dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardBackgroundColor="#EFEFEF"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/statiticsLinearLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingTop="5dp"
+                                    android:text="@string/statistics"
+                                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <com.kawika.smart_survey.speedometer.ImageSpeedometer
+                                        android:id="@+id/imageSpeedometer"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        app:sv_image="@drawable/speed_arc"
+                                        app:sv_indicator="LineIndicator"
+                                        app:sv_indicatorColor="@color/lightBlack"
+                                        app:sv_speedTextColor="#fff"
+                                        app:sv_speedTextPadding="-90dp"
+                                        app:sv_speedTextSize="26sp"
+                                        app:sv_unit="m"
+                                        app:sv_unitTextColor="#fff"
+                                        app:sv_unitTextSize="21sp"
+                                        app:sv_unitUnderSpeedText="true" />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:id="@+id/startPointTextView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_alignParentStart="true"
+                                            android:paddingStart="100dp"
+                                            android:text="0"
+                                            android:textColor="@android:color/black" />
+
+                                        <TextView
+                                            android:id="@+id/endPointTextView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_alignParentEnd="true"
+                                            android:paddingEnd="100dp"
+                                            android:text="500"
+                                            android:textColor="@android:color/black" />
+                                    </RelativeLayout>
+                                </FrameLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:layout_marginTop="5dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/topicsLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/topics"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                 />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="5dp"
+                                android:weightSum="1">
+
+                                <com.github.mikephil.charting.charts.PieChart
+                                    android:id="@+id/pieChart"
+                                    android:layout_width="150dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true" />
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/topicsStatiticsRecyclerView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toEndOf="@+id/pieChart"
+                                    android:descendantFocusability="blocksDescendants"
+                                    android:paddingStart="10dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.0"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/latestAcheivementsLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:background="@drawable/layout_background"
+                            android:descendantFocusability="blocksDescendants"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/latestAcheivementsTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/latest_achievemnts"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:textColor="@android:color/white" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/latestAcheivementsRecyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clipToPadding="false"
+                                android:layoutAnimation="@anim/layout_animation_fall_down"
+                                android:scrollbarStyle="outsideOverlay"
+                                android:visibility="gone"
+                                android:scrollbars="none"/>
+
+                            <TextView
+                                android:id="@+id/nolatestAcheivementsTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/no_latest_acheivement"
+                                android:textColor="@color/white"
+                                android:textSize="13sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/navigation"
+            layout="@layout/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</layout>

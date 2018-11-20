@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/quiz_background">
+
+    <RelativeLayout
+        android:id="@+id/closeRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_toLeftOf="@id/quizCloseImageView">
+
+            <TextView
+                android:id="@+id/currentScoreTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:minWidth="30dp"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/animEndImageView"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:textColor="@color/white"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/quizCloseImageView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_activity_close_icon"
+            android:tint="@android:color/white" />
+    </RelativeLayout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/tools"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:ignore="NamespaceTypo">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp">
+
+            <FrameLayout
+                android:id="@+id/recyclerFrameLayout"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/questionCountRecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </FrameLayout>
+
+            <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/recyclerFrameLayout">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/confirmButtonCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardBackgroundColor="#50E7404E"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="0dp"
+                        card_view:cardPreventCornerOverlap="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profileImageView"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/avatar"
+                                android:padding="4dp"
+                                android:src="@drawable/avatar"
+                                android:transitionName="@string/simple_fragment_transition"
+                                app:civ_border_color="@color/white"
+                                app:civ_border_width="2dp" />
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="6.0"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/userNameTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:text="@string/quila_name"
+                                    android:textColor="@android:color/white" />
+
+                                <TextView
+                                    android:id="@+id/myScoreTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:text="@string/my_score_40"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="15dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardBackgroundColor="@android:color/white"
+                        card_view:cardCornerRadius="18dp"
+                        card_view:cardElevation="0dp"
+                        card_view:cardPreventCornerOverlap="true">
+
+                        <TextView
+                            android:id="@+id/counterTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="00:10 sec"
+                            android:textColor="@color/main_pink"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/transparency_circle"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/questionNumberTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="01"
+                            android:textColor="@android:color/white"
+                            android:textSize="60sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/question"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/questionTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/question1"
+                        android:textColor="@color/main_pink"
+                        android:textSize="15sp"
+                        android:padding="7dp"
+                        android:background="@drawable/question_text_background"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/optionsMainRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingBottom="10dp" />
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/shuttle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gold_coin"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

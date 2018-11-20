@@ -1,0 +1,128 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/main_background"
+
+        >
+        <android.support.v7.widget.CardView
+            android:id="@+id/notificationCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_centerInParent="true"
+
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            card_view:cardBackgroundColor="@color/grey"
+            card_view:cardCornerRadius="5dp">
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/labelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:text="@string/in_game_music_permission"
+        android:textColor="@android:color/white"
+        android:textSize="19sp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="30dp"
+    android:layout_below="@+id/labelTextView">
+    <android.support.v7.widget.CardView
+        android:id="@+id/enableCardView"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="1.0"
+        android:layout_gravity="center"
+        android:clickable="true"
+        card_view:cardBackgroundColor="@color/main_pink"
+        card_view:cardCornerRadius="16dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="5dp"
+        card_view:cardElevation="0dp"
+        card_view:cardPreventCornerOverlap="true">
+
+        <Button
+            android:id="@+id/enableButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/enable"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/disableCardView"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="1.0"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:layout_marginRight="5dp"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="16dp"
+        card_view:cardElevation="0dp"
+        card_view:cardPreventCornerOverlap="true">
+
+        <Button
+            android:id="@+id/disableButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/disable"
+            android:textAllCaps="false"
+            android:textColor="@color/main_pink"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+
+</RelativeLayout>
+        </android.support.v7.widget.CardView>
+    <TextView
+        android:id="@+id/skipTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="@string/notification_skip"
+        android:textColor="@android:color/white"
+        android:textSize="14dp" />
+    </RelativeLayout>
+</RelativeLayout>

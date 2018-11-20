@@ -1,0 +1,326 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <ImageView
+                android:id="@+id/mainBackgroundImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/gravity_background"
+                tools:ignore="ContentDescription" />
+        </HorizontalScrollView>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profileImageView"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/avatar"
+                            android:src="@drawable/avatar"
+                            android:transitionName="@string/simple_fragment_transition"
+                            app:civ_border_color="@android:color/white"
+                            app:civ_border_width="2dp"
+                            tools:ignore="UnusedAttribute" />
+
+                        <ProgressBar
+                            android:id="@+id/imageProgressBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/choosePictureRelativeLayout"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="end|bottom"
+                            android:background="@drawable/white_circle">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/ic_photo_camera_white"
+                                android:tint="@android:color/white"
+                                tools:ignore="ContentDescription" />
+                        </RelativeLayout>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="15dp"
+                        android:text="@string/create_avatar_or_upload_picture"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/firstNameCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="15dp"
+                        card_view:cardCornerRadius="18dp"
+                        card_view:cardElevation="0dp">
+
+                        <EditText
+                            android:id="@+id/firstNameEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:textDirection="locale"
+                            android:textAlignment="viewStart"                            android:hint="@string/first_name"
+                            android:inputType="text"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="13sp" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/lastNameCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        card_view:cardCornerRadius="18dp"
+                        card_view:cardElevation="0dp"
+                        card_view:cardPreventCornerOverlap="true">
+
+                        <EditText
+                            android:id="@+id/lastNameEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:hint="@string/last_name"
+                            android:inputType="text"
+                            android:textDirection="locale"
+                            android:textAlignment="viewStart"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="13sp" />
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/emailIdCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        card_view:cardCornerRadius="18dp"
+                        card_view:cardElevation="0dp"
+                        card_view:cardPreventCornerOverlap="true">
+
+                        <EditText
+                            android:id="@+id/emailIdEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:hint="@string/email_id"
+                            android:textDirection="locale"
+                            android:textAlignment="viewStart"
+                            android:inputType="textEmailAddress"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="13sp" />
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/phoneNumberCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        card_view:cardCornerRadius="18dp"
+                        card_view:cardElevation="0dp"
+                        card_view:cardPreventCornerOverlap="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/countryCodeTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:layout_alignParentEnd="true"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="+971"
+                                android:textColor="@android:color/black" />
+                            <EditText
+                                android:id="@+id/phoneNumberEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_toStartOf="@+id/countryCodeTextView"
+                                android:background="@null"
+                                android:hint="@string/phone_number"
+                                android:inputType="phone"
+                                android:maxLength="9"
+                                android:textDirection="locale"
+                                android:textAlignment="viewEnd"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textSize="13sp" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/createPasswordCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        card_view:cardCornerRadius="18dp"
+                        card_view:cardElevation="0dp"
+                        card_view:cardPreventCornerOverlap="true">
+
+                        <EditText
+                            android:id="@+id/createPasswordEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:hint="@string/create_password"
+                            android:inputType="textPassword"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="start|center_vertical"
+                            android:textAlignment="viewStart"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="13sp" />
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/confirmPasswordCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        card_view:cardCornerRadius="18dp"
+                        card_view:cardElevation="0dp"
+                        card_view:cardPreventCornerOverlap="true">
+
+                        <EditText
+                            android:id="@+id/confirmPasswordEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:inputType="textPassword"
+                            android:hint="@string/confirm_password"
+                            android:gravity="start|center_vertical"
+                            android:textAlignment="viewStart"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="13sp" />
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/departmentCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        card_view:cardCornerRadius="18dp"
+                        card_view:cardElevation="0dp"
+                        card_view:cardPreventCornerOverlap="true">
+
+                        <TextView
+                            android:id="@+id/departmentTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:drawableEnd="@drawable/ic_arrow_drop_down"
+                            android:gravity="center_vertical"
+                            android:hint="@string/department"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="13sp" />
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/confirmButtonCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="30dp"
+                        card_view:cardBackgroundColor="@color/main_pink"
+                        card_view:cardCornerRadius="18dp"
+                        card_view:cardElevation="0dp"
+                        card_view:cardPreventCornerOverlap="true">
+
+                        <Button
+                            android:id="@+id/registerButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/create_account"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="13sp" />
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </FrameLayout>
+</RelativeLayout>

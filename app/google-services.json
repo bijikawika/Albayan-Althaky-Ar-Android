@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "28748416145",
+    "firebase_url": "https://minimoto-e926b.firebaseio.com",
+    "project_id": "minimoto-e926b",
+    "storage_bucket": "minimoto-e926b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:28748416145:android:ee7b0af050e8ae0e",
+        "android_client_info": {
+          "package_name": "com.kawika.smart_survey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "28748416145-e8rc3tf2i57q7jhbac4fejq9i0jv9kjv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kawika.smart_survey",
+            "certificate_hash": "c32d612c5335263710360ad3a5fa7b2d0caf4b6e"
+          }
+        },
+        {
+          "client_id": "28748416145-a6eo2skrsqepdv0dhp21gnbjti9ufo00.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kawika.smart_survey",
+            "certificate_hash": "0967bbbb097a89dd5a98f4125a0b4b19e4437018"
+          }
+        },
+        {
+          "client_id": "28748416145-7o97fgq2ucdaunqrvf8o0nlafe6t58d8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuVEhniUjZTjzVyptMLh5t2uOP4O7XQtI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "28748416145-7o97fgq2ucdaunqrvf8o0nlafe6t58d8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "28748416145-5qtl63nbk9nubd567p3vu0s2og99e04s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kawika.MamaMentors"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

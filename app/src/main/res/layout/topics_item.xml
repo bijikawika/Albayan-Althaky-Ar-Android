@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="120dp"
+    android:layout_height="130dp">
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="3dp"
+        android:background="@android:color/white"
+        android:layout_centerInParent="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="4dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/no_resource"
+                android:scaleType="centerCrop" />
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_below="@+id/photo"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:maxLines="1"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="2dp"
+                android:ellipsize="end"
+                android:textSize="13sp"
+                />
+
+        </RelativeLayout>
+        <FrameLayout
+            android:id="@+id/tickImage"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|bottom"
+            android:background="@color/semiTransparent">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_vector_check" />
+        </FrameLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

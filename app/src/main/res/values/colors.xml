@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="dark_grey">#969393</color>
+    <color name="landing_background">#EED7C6</color>
+    <color name="main_pink">#E7404E</color>
+    <color name="grey">#55000000</color>
+    <color name="green">#228B22</color>
+    <color name="listBackGround">#EED7C6</color>
+    <color name="actionBarColor">#E42027</color>
+    <color name="semiTransparent">#99000000</color>
+    <color name="lightBlack">#222222</color>
+    <color name="statusBarColor">#FFE6343A</color>
+    <color name="lite_green">#86BC2B</color>
+    <color name="yellow">#FFE6C234</color>
+    <color name="white">#e9e2e2</color>
+    <color name="lightSemiTransparent">#59565656</color>
+    <color name="lightTransparent">#47bcbcbc</color>
+
+    <color name="gold_med">#ab804b</color>
+    <color name="gold_light">#edd3b2</color>
+    <color name="normal_card_background">#50E7404E</color>
+    <color name="top_players_background">#fbe8ea</color>
+    <color name="dim_white">#FFFBE8EA</color>
+    <color name="transparency_white">#73efefef</color>
+    <color name="gold">#DAA520</color>
+</resources>
