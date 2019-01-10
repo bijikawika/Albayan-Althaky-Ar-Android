@@ -67,7 +67,8 @@
     <string name="dubai_corporate_low">قانون الشركات في دبي</string>
     <string name="dubai_financial_low">قانون دبي المالي والعقود</string>
     <string name="start_quiz">أبداء المسابقة</string>
-    <string name="invalid_selection_with_explanation">اختيار غير صالح مع شرح</string>
+    <string name="invalid_selection_with_explanation">إختيار غير صحيح
+الصواب:</string>
     <string name="question1">متى يتم اختيار المقاول من خلال الاتفاق المباشر؟</string>
     <string name="question">سؤال</string>
     <string name="get_ready">إستعد</string>
